@@ -8,7 +8,6 @@ Designed for high-availability telecom infrastructure monitoring.
 import os
 import sys
 import time
-import json
 import logging
 import requests
 from datetime import datetime, timezone

@@ -1,3 +1,4 @@
+![CI](https://github.com/SepantaaM/telecom-monitor/actions/workflows/ci.yml/badge.svg)
 # Telecom Service Monitor
 
 A production-grade observability stack for telecom infrastructure, built with Docker Compose. Provides real-time metrics collection, dashboards, alerting, and automated health checks.

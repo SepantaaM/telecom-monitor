@@ -34,16 +34,18 @@ jobs:
       - name: Validate Prometheus config
         run: |
           docker run --rm \
+            --entrypoint promtool \
             -v ${{ github.workspace }}/prometheus:/etc/prometheus \
             prom/prometheus:latest \
-            promtool check config /etc/prometheus/prometheus.yml
+            check config /etc/prometheus/prometheus.yml
 
       - name: Validate alert rules
         run: |
           docker run --rm \
+            --entrypoint promtool \
             -v ${{ github.workspace }}/prometheus:/etc/prometheus \
             prom/prometheus:latest \
-            promtool check rules /etc/prometheus/alerts.yml
+            check rules /etc/prometheus/alerts.yml
 
   integration-test:
     name: Integration Test — Stack Boots
